@@ -1,0 +1,64 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+body{
+    background: rgb(42, 66, 110);
+    color: white;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.main_div{
+    width: 100%;
+
+    max-width: 1500px;
+    margin: 25px auto:
+}
+.main_div h1{
+    text-align: center;
+    font-weight: 300;
+}
+.main_div .panels{
+    list-style-type: none;
+    margin-top: 20px;
+
+}
+.main_div .panels li{
+    position: relative;
+    width: 25%;
+float: left;
+font-size: 25px;
+cursor: pointer;
+display: block;
+box-sizing: border-box;
+cursor: pointer;
+}
+.main_div .panels li div{
+    
+    width: 100%;
+    text-align: center;
+    padding: 50% 0;
+    text-transform: uppercase;
+}
+/* Animation part */
+.main_div .panels li div.back{
+    transform: rotateY(90deg);
+}
+.main_div .panels li div.front{
+    position: absolute;
+}
+.main_div .panels li:hover div.front{
+    animation: opp 0.4s linear forwards;
+}
+.main_div .panels li:hover div.back{
+    animation: opp 0.4s 0.3s linear reverse forwards;
+}
+@keyframes opp {
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(90deg);
+    }
+}
